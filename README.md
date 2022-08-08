@@ -13,4 +13,4 @@ In this project, I created a calendar with list to do function from given starte
 ## Project Ourcome Overview
 ![image](./Assets/image/1.JPG)
 
-[Visit my Work Day Calendar Page Here](https://aurorayihe.github.io/challenge5-Work-Day-Scheduler/)
+[Visit my Work Day Calendar Page Here](https://aurorayihe.github.io/challenge5_WordDayCalendar/)
