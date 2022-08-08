@@ -31,8 +31,8 @@ setColor();
 // handle to-do submission
 var content = [];
 var times = ["09", "10", "11", "12", "13", "14","15","16","17"];
-saveBtnEl.on("click", saveContent);
 
+saveBtnEl.on("click", saveContent);
 function saveContent(event){
     content = JSON.parse(localStorage.getItem("content"));
     var btnClicked = $(event.target);
@@ -78,5 +78,6 @@ function renderInput(){
     }  
 }
 
+//load previous inputs
 renderInput();
 
