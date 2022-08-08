@@ -2,7 +2,7 @@
 This is the project for week5. It contains jQuery practice. First functional draft done 8/5/2022. Final draft 8/7/2022. 
 
 ## Project Description
-In this project, I created a calendar with list to do function from given starter code. 
+In this project, I created a calendar with list to do function from given starter code. Utilized localStorage, moment(), jQuery event listener, etc.
 
 ## Difficulties Encountered
 1. We learned so many syntax for the past few lectures and I was a bit confused
