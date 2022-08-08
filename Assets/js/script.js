@@ -11,7 +11,6 @@ function displayTime(){
 
 setInterval(displayTime, 1000);
 
-
 // Handle the color of each text area
 function setColor(){
     var currentTime = moment().format('H');
@@ -28,7 +27,8 @@ function setColor(){
 }
 
 setColor();
-// handle to do submission
+
+// handle to-do submission
 var content = [];
 var times = ["09", "10", "11", "12", "13", "14","15","16","17"];
 saveBtnEl.on("click", saveContent);
@@ -43,28 +43,40 @@ function saveContent(event){
     }
     else{
         btnClicked.parent().find("input").val(input);
-        content.push({clickTime:time, textInput: input});
+        if (content == null){
+            content = [];
+            content.push({clickTime:time, textInput: input});
+        } else {
+            content.push({clickTime:time, textInput: input});
+        }
         storeLocal();
         renderInput();
     }
 
 }
 
+// store data to local storage
 function storeLocal(){
     localStorage.setItem("content", JSON.stringify(content));
 }
 
+// render previous input
 function renderInput(){
     var currentContentJSON = localStorage.getItem("content");
     var currentContent=JSON.parse(currentContentJSON);
-    console.log(currentContent);
-    for(let i = 0; i < currentContent.length; i++){
-        var currentItem = currentContent[i];
-        let input = currentItem.textInput;
-        let j = times.indexOf(currentItem.clickTime);
-        textEl = $('.textarea'); 
-        textEl[j].setAttribute('value', input);
-    }
+    if (currentContent == null){
+        return;
+    } else{
+        console.log(currentContent);
+        for(let i = 0; i < currentContent.length; i++){
+            var currentItem = currentContent[i];
+            let input = currentItem.textInput;
+            let j = times.indexOf(currentItem.clickTime);
+            textEl = $('.textarea'); 
+            textEl[j].setAttribute('value', input);
+        }
+    }  
 }
 
 renderInput();
+
