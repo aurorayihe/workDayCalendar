@@ -1,4 +1,4 @@
-# Challenge5
+# Challenge5 - Work Day Calendar
 This is the project for week5. It contains jQuery practice. First functional draft done 8/5/2022. Final draft 8/7/2022. 
 
 ## Project Description
